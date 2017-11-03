@@ -1,0 +1,17 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "affected-chieftain"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2017/business/mortgage-cities"
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": []
+}

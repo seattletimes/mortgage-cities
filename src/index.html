@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Where home purchases would be most affected by the GOP tax plan</h1>
+        <p>The GOP proposal would allow homeowners to deduct from their taxes interest paid on the first $500,000 of a mortgage, down from $1 million today, for future home sales. The map shows how often mortgages went above $500,000 for homes bought this year. </p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=10>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+
+        </div>
+        <aside class="legend">
+          <h1>Mortgages over $500,000</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #270011"></span> 40% and up</li>
+            <li>
+              <span class="block" style="background-color: #7a044d"></span> 30-39%</li>
+            <li>
+              <span class="block" style="background-color: #c127a4"></span> 20-29%</li>
+            <li>
+              <span class="block" style="background-color: #f47dae"></span> 10-19%</li>
+            <li>
+              <span class="block" style="background-color: #fcc5c0"></span> 0-9%</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="source">Note: Home sales in unincorporated areas not shown<br>Source: Attom Data Solutions
+        <span class="credit">Emily m. Eng / THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
